@@ -1,0 +1,52 @@
+<h1>Welcome!</h1>
+
+<div class='play-container'>
+    <p>You've clicked <span (click)='counterClick()'>this</span> {{clickCounter}}</p>
+</div>
+
+<div class='play-container'>
+    <p>
+        <input type='text' [(ngModel)]='name'>
+        <br>
+        <strong>You said: </strong>{{ name }}
+    </p>
+</div>
+
+<!-- <div class='play-container' [style.background-color]="clickCounter > 4 ? 'yellow' : 'lightgrey'">
+    <ng-template [ngIf]='clickCounter > 4' [ngIfElse]='none'>
+        <p>The click counter <strong>IS GREATER</strong> than 4.</p>
+    </ng-template>
+    <ng-template #none>
+        <p>The click counter <strong>is not greater</strong> than 4.</p>
+    </ng-template>
+</div> -->
+
+<!-- <div class='play-container' [ngStyle]="{
+    'background-color': clickCounter > 4 ? 'red' : 'lightgrey',
+    'border': clickCounter > 4 ? '4px solid black' : 'none'
+}">
+    <ng-template [ngIf]='clickCounter > 4' [ngIfElse]='none'>
+        <p>The click counter <strong>IS GREATER</strong> than 4.</p>
+    </ng-template>
+    <ng-template #none>
+        <p>The click counter <strong>is not greater</strong> than 4.</p>
+    </ng-template>
+</div> -->
+
+<!-- <div class='play-container' [class.active]="clickCounter > 5">
+    <ng-template [ngIf]='clickCounter > 5' [ngIfElse]='none'>
+        <p>The click counter <strong>IS GREATER</strong> than 5.</p>
+    </ng-template>
+    <ng-template #none>
+        <p>The click counter <strong>is not greater</strong> than 5.</p>
+    </ng-template>
+</div> -->
+
+<div class='play-container' [ngClass]="setClasses()">
+    <ng-template [ngIf]='clickCounter > 5' [ngIfElse]='none'>
+        <p>The click counter <strong>IS GREATER</strong> than 5.</p>
+    </ng-template>
+    <ng-template #none>
+        <p>The click counter <strong>is not greater</strong> than 5.</p>
+    </ng-template>
+</div>
